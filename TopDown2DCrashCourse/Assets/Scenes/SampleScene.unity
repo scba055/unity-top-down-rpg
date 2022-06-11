@@ -4410,6 +4410,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2419035862106074681, guid: 9f4facb25d9053a409c43aa478348a7a, type: 3}
+      propertyPath: collisionOffset
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 2419035862106074681, guid: 9f4facb25d9053a409c43aa478348a7a, type: 3}
       propertyPath: movementFilter.layerMask.m_Bits
       value: 1
       objectReference: {fileID: 0}
