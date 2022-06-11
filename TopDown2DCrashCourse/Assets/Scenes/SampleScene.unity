@@ -4409,6 +4409,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2419035862106074681, guid: 9f4facb25d9053a409c43aa478348a7a, type: 3}
+      propertyPath: movementFilter.layerMask.m_Bits
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2829090043629761859, guid: 9f4facb25d9053a409c43aa478348a7a, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -4455,6 +4459,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3069581064898238572, guid: 9f4facb25d9053a409c43aa478348a7a, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 9092804224119722206, guid: 9f4facb25d9053a409c43aa478348a7a, type: 3}
+      propertyPath: m_Actions
+      value: 
+      objectReference: {fileID: -944628639613478452, guid: f9da091f4d77bac479982337efdeb6d9, type: 3}
+    - target: {fileID: 9092804224119722206, guid: 9f4facb25d9053a409c43aa478348a7a, type: 3}
+      propertyPath: m_DefaultActionMap
       value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
