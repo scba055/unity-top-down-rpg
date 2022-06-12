@@ -8,13 +8,14 @@ public class SwordAttack : MonoBehaviour
     //     left, right
     // }
 
+    public float damage = 3;
+
     // public AttackDirection attackDirection;
-    Collider2D swordCollider;
+    public Collider2D swordCollider;
     Vector2 rightAttackOffset;
 
     private void Start() {
-        swordCollider = GetComponent<Collider2D>();
-        rightAttackOffset = transform.position; // positions the hitbox to the current direction the player is facing
+        rightAttackOffset = transform.localPosition; // positions the hitbox to the current direction the player is facing
     }
 
     // private void Attack() { // allows the program to know which direction the attack is going
@@ -32,13 +33,13 @@ public class SwordAttack : MonoBehaviour
     public void AttackRight() {
         //print("Attack succeeded");
         swordCollider.enabled = true;
-        transform.position = rightAttackOffset;
+        transform.localPosition = rightAttackOffset;
     }
 
     public void AttackLeft() {
         //print("Attack succeeded");
         swordCollider.enabled = true;
-        transform.position = new Vector3(rightAttackOffset.x * -1, rightAttackOffset.y);
+        transform.localPosition = new Vector3(rightAttackOffset.x * -1, rightAttackOffset.y);
     }
 
     public void StopAttack() {
@@ -48,6 +49,11 @@ public class SwordAttack : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == "Enemy") {
             // deals damage to enemy
+            enemySlime slime = other.GetComponent<enemySlime>();
+
+            if (slime != null) {
+                slime.setHealth(damage);
+            }
         }
     }
 }

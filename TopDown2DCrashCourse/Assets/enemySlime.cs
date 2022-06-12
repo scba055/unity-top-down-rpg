@@ -4,20 +4,21 @@ using UnityEngine;
 
 public class enemySlime : MonoBehaviour
 {
-    public float Health {
-        set {
-            health = value;
-            if (health <= 0) {
-                Defeated();
-            }
-        }
+    public float Health = 10;
+
+    public float getHealth() {
+        return Health;
     }
-    
-    public void TakeDamage(float damage) {
-        health -= damage;
+
+    public void setHealth(float value) {
+        Health -= value;
+        if (Health <= 0) {
+            Defeated();
+        }
+        print(getHealth());
     }
 
     public void Defeated() {
-        
+        Destroy(gameObject);
     }
 }

@@ -92,13 +92,18 @@ public class PlayerController : MonoBehaviour
     }
 
     public void SwordAttack() { // different way to do the sword attack direction -> other way is commented out
-        LockMovement();
+       // LockMovement();
         if (spriteRenderer.flipX == true) {
             swordAttack.AttackLeft();
         } else {
             swordAttack.AttackRight();
         }
 
+    }
+
+    public void EndSwordAttack() {
+        UnlockMovement();
+        swordAttack.StopAttack();
     }
 
     //stops the player from moving when attacking
